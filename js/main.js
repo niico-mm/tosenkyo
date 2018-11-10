@@ -1,10 +1,16 @@
-var startX, startY, endX, endY, startTime, endTime;
+var startX, startY, endX, endY, startTime, endTime, beta, gamma;
+
+window.addEventListener('deviceorientation', function(evt){
+  beta = evt.beta;
+  gamma = evt.gamma;
+});
 
 document.getElementById('hoge').addEventListener('touchstart', function(evt){
   startX = evt.touches[0].screenX;
   startY = evt.touches[0].screenY;
   startTime = new Date();
 });
+
 document.getElementById('hoge').addEventListener('touchend', function(evt){
   endX = evt.changedTouches[0].screenX;
   endY = evt.changedTouches[0].screenY;
@@ -21,6 +27,5 @@ document.getElementById('hoge').addEventListener('touchend', function(evt){
   /*速度（pt/ms）*/
   var speed = distance / diffTime;
 
-  alert(speed);
-
+  alert(beta);
 });
