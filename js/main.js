@@ -1,4 +1,15 @@
 var startX, startY, endX, endY, startTime, endTime, beta, gamma;
+var secTop = document.getElementById('top');
+var secMain = document.getElementById('main');
+var secResult = document.getElementById('result');
+
+secMain.style.display = 'none';
+secResult.style.display = 'none';
+
+document.getElementById('start').addEventListener('click', function(evt){
+  secTop.style.display = 'none';
+  secMain.style.display = 'block';
+});
 
 window.addEventListener('deviceorientation', function(evt){
   beta = evt.beta;
@@ -27,5 +38,14 @@ document.getElementById('hoge').addEventListener('touchend', function(evt){
   /*速度（pt/ms）*/
   var speed = distance / diffTime;
 
-  alert(beta);
+  console.log(h , w , speed , beta , gamma);
+
+  if( h && w && speed && beta && gamma ) {
+    document.getElementById('point').textContent='100';
+    secMain.style.display = 'none';
+    secResult.style.display = 'block';
+  } else {
+    alert('スマホでやってね');
+    // document.getElementById('point').textContent='0';
+  }
 });
