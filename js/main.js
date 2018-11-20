@@ -1,3 +1,5 @@
+document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
+
 var startX, startY, endX, endY, startTime, endTime, beta, gamma;
 var secTop = document.getElementById('top');
 var secMain = document.getElementById('main');
