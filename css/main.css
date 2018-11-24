@@ -1,0 +1,90 @@
+
+*{
+margin:0;
+padding:0;
+}
+html,
+body{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+button{
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+/*共通部分*/
+.sec-cmn {
+  width: 100vw;
+  height: 100vh;
+}
+/*トップ*/
+.ttl-top {
+  margin-bottom: 30px;
+  padding-top: 30px;
+  color: #dc143c;
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+}
+.ttl-top span {
+  margin: 0 10px;
+  font-size: 32px;
+}
+.fig-top {
+  margin: 0 auto 30px;
+  width: 70%;
+}
+.btn-top {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+/*ゲーム画面*/
+.fig-game {
+  margin: 0 0 30px;
+}
+.area-flick {
+  margin: 0 auto;
+  width: 40%;
+  height: 40%;
+  border: 3px dotted #dc143c;
+}
+
+/*結果画面*/
+.ttl-result {
+  margin-bottom: 30px;
+  padding-top: 30px;
+  color: #4169e1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+}
+.fig-result {
+  margin: 0 auto 30px;
+  width: 70%;
+}
+.area-result {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 30px;
+  width: 100%;
+}
+.txt-name,
+.txt-point {
+  font-size: 20px;
+}
+.txt-detail {
+  margin: 0 20px;
+  color: #999;
+}
