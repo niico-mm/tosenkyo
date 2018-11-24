@@ -51,3 +51,8 @@ document.getElementById('hoge').addEventListener('touchend', function(evt){
     // document.getElementById('point').textContent='0';
   }
 });
+
+document.getElementById('back').addEventListener('click', function(evt){
+  secResult.style.display = 'none';
+  secTop.style.display = 'block';
+});
