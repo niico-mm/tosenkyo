@@ -1,7 +1,7 @@
 
 *{
-margin:0;
-padding:0;
+	margin:0;
+	padding:0;
 }
 html,
 body{
@@ -33,7 +33,7 @@ img {
   padding-top: 30px;
   color: #dc143c;
   text-align: center;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 36px;
 }
 .ttl-top span {
@@ -67,7 +67,7 @@ img {
   padding-top: 30px;
   color: #4169e1;
   text-align: center;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 36px;
 }
 .fig-result {
