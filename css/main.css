@@ -31,7 +31,7 @@ img {
 .ttl-top {
   margin-bottom: 30px;
   padding-top: 30px;
-  color: #dc143c;
+  color: #c5181f;
   text-align: center;
   font-weight: 800;
   font-size: 36px;
@@ -58,26 +58,26 @@ img {
   margin: 0 auto;
   width: 40%;
   height: 40%;
-  border: 3px dotted #dc143c;
+  border: 3px dotted #c5181f;
 }
 
 /*結果画面*/
 .ttl-result {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding-top: 30px;
-  color: #4169e1;
+  color: #c5181f;
   text-align: center;
   font-weight: 800;
   font-size: 36px;
 }
 .fig-result {
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
   width: 70%;
 }
 .area-result {
   display: flex;
   justify-content: center;
-  margin: 0 auto 30px;
+  margin: 0 auto 10px;
   width: 100%;
 }
 .txt-name,
@@ -85,6 +85,11 @@ img {
   font-size: 20px;
 }
 .txt-detail {
-  margin: 0 20px;
+  margin: 0 20px 20px;
   color: #999;
+}
+.btn-result {
+  display: block;
+  margin: 0 auto;
+  width: 20%;
 }

@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <!--<div id="hoge"></div>-->
 
   <section id="top" class="sec-cmn">
     <h1 class="ttl-top">スマホ<span>de</span>投扇興</h1>
@@ -20,19 +19,22 @@
 
   <section id="main" class="sec-cmn">
     <figure class="fig-game"><img src="images/img_game.png" alt="ゲーム背景"></figure>
-    <div id="hoge" class="area-flick"></div>
+    <div id="flick" class="area-flick"></div>
   </section>
 
   <section id="result" class="sec-cmn">
     <h2 class="ttl-result">結果</h2>
-    <figure class="fig-result"><img src="images/result/ashibiki.jpg" alt="あしびき"></figure>
+    <figure class="fig-result"><img id="img" src="" alt=""></figure>
     <div class="area-result">
-      <p class="txt-name">あしびき</p>
-      <p class="txt-point">：<span id="point">30</span>点</p>
+      <p id="name" class="txt-name"></p>
+      <p class="txt-point">：<span id="point"></span>点</p>
     </div>
-    <p class="txt-detail">扇子が枕の上に乗り、蝶は枕にぶら下がる。</p>
+    <p id="detail" class="txt-detail"></p>
+    <button id="back" class="btn-result" type="button" name="button"><img src="images/ico_home.png" alt="ホーム"></button>
   </section>
 
+  <script src="js/data.js"></script>
+  <script src="js/judgement.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

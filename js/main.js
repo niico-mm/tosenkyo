@@ -5,6 +5,11 @@ var secTop = document.getElementById('top');
 var secMain = document.getElementById('main');
 var secResult = document.getElementById('result');
 
+var txtName = document.getElementById('name');
+var txtPoint = document.getElementById('point');
+var txtDetail = document.getElementById('detail');
+var txtImg = document.getElementById('img');
+
 secMain.style.display = 'none';
 secResult.style.display = 'none';
 
@@ -18,13 +23,13 @@ window.addEventListener('deviceorientation', function(evt){
   gamma = evt.gamma;
 });
 
-document.getElementById('hoge').addEventListener('touchstart', function(evt){
+document.getElementById('flick').addEventListener('touchstart', function(evt){
   startX = evt.touches[0].screenX;
   startY = evt.touches[0].screenY;
   startTime = new Date();
 });
 
-document.getElementById('hoge').addEventListener('touchend', function(evt){
+document.getElementById('flick').addEventListener('touchend', function(evt){
   endX = evt.changedTouches[0].screenX;
   endY = evt.changedTouches[0].screenY;
   endTime = new Date();
@@ -32,7 +37,7 @@ document.getElementById('hoge').addEventListener('touchend', function(evt){
   /*縦の移動*/
   var h = startY - endY;
   /*横の移動*/
-  var w = startX - endX;
+  var w = Math.abs(startX - endX);
   /*距離*/
   var distance = Math.sqrt(h*h + w*w);
   /*経過時間*/
@@ -40,14 +45,26 @@ document.getElementById('hoge').addEventListener('touchend', function(evt){
   /*速度（pt/ms）*/
   var speed = distance / diffTime;
 
-  console.log(h , w , speed , beta , gamma);
+  //console.log(h , w , speed , beta , gamma);
+  //alert(gamma);
 
-  if( h && w && speed && beta && gamma ) {
-    document.getElementById('point').textContent='100';
+  var meiNum = judge(h, w, speed, beta, gamma);
+
+  if(meiNum >= 0) {
     secMain.style.display = 'none';
     secResult.style.display = 'block';
+
+    txtName.innerHTML = mei[meiNum].name;
+    txtPoint.innerHTML = mei[meiNum].point;
+    txtDetail.innerHTML = mei[meiNum].detail;
+    txtImg.alt = mei[meiNum].name;
+    txtImg.src = mei[meiNum].img;
   } else {
     alert('スマホでやってね');
-    // document.getElementById('point').textContent='0';
   }
+});
+
+document.getElementById('back').addEventListener('click', function(evt){
+  secResult.style.display = 'none';
+  secTop.style.display = 'block';
 });
