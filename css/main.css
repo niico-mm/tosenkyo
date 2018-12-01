@@ -61,6 +61,29 @@ img {
   border: 3px dotted #c5181f;
 }
 
+/* アニメーション画面 */
+.sec-cmn.anime {
+	position: relative;
+	overflow: hidden;
+	background: url('../images/bg_tatami.png') no-repeat top center;
+	background-size: cover;
+}
+.fig-anime {
+	position: absolute;
+	top: 350px;
+  right: 0;
+	left: 0;
+	margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  transition: all 500ms 300ms ease-in;
+}
+.fig-anime.js-active {
+	width: 80px;
+  height: 80px;
+  transform: translateY(-600px);
+}
+
 /*結果画面*/
 .ttl-result {
   margin-bottom: 20px;

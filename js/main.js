@@ -3,7 +3,10 @@ document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passi
 var startX, startY, endX, endY, startTime, endTime, beta, gamma;
 var secTop = document.getElementById('top');
 var secMain = document.getElementById('main');
+var secAnime = document.getElementById('anime');
 var secResult = document.getElementById('result');
+
+var animetion = document.getElementById('animetion');
 
 var txtName = document.getElementById('name');
 var txtPoint = document.getElementById('point');
@@ -50,15 +53,24 @@ document.getElementById('flick').addEventListener('touchend', function(evt){
 
   var meiNum = judge(h, w, speed, beta, gamma);
 
-  if(meiNum >= 0) {
-    secMain.style.display = 'none';
+  function result() {
+    secAnime.style.display = 'none';
     secResult.style.display = 'block';
+
 
     txtName.innerHTML = mei[meiNum].name;
     txtPoint.innerHTML = mei[meiNum].point;
     txtDetail.innerHTML = mei[meiNum].detail;
     txtImg.alt = mei[meiNum].name;
     txtImg.src = mei[meiNum].img;
+  }
+
+  if(meiNum >= 0) {
+    secMain.style.display = 'none';
+    secAnime.style.display = 'block';
+    animetion.classList.add('js-active');
+
+    window.setTimeout(result, 2000);
   } else {
     alert('スマホでやってね');
   }
