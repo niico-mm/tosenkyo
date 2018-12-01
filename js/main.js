@@ -63,14 +63,21 @@ document.getElementById('flick').addEventListener('touchend', function(evt){
     txtDetail.innerHTML = mei[meiNum].detail;
     txtImg.alt = mei[meiNum].name;
     txtImg.src = mei[meiNum].img;
+
+    animetion.classList.remove('js-active');
   }
 
   if(meiNum >= 0) {
     secMain.style.display = 'none';
     secAnime.style.display = 'block';
-    animetion.classList.add('js-active');
+    window.setTimeout( function() {
+      animetion.classList.add('js-active');
+    }, 1000);
 
-    window.setTimeout(result, 2000);
+    animetion.addEventListener("transitionend", function(evt) {
+      window.setTimeout(result, 1000);
+    });
+
   } else {
     alert('スマホでやってね');
   }
