@@ -86,7 +86,7 @@ img {
 
 /*結果画面*/
 .ttl-result {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-top: 30px;
   color: #c5181f;
   text-align: center;
@@ -95,7 +95,7 @@ img {
 }
 .fig-result {
   margin: 0 auto 20px;
-  width: 70%;
+  width: 65%;
 }
 .fig-cap {
   color: #999;
@@ -113,7 +113,7 @@ img {
   font-size: 20px;
 }
 .txt-detail {
-  margin: 0 20px 20px;
+  margin: 0 20px 15px;
   color: #999;
 }
 .btn-result {
