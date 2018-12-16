@@ -4,9 +4,9 @@ function judge(h, w, speed, beta, gmma) {
   } else if((h >= 100) && (w <= 15) && (speed > 0.5) && (beta <= 7) && (beta >= -7) && (gamma <= 7) && (gamma >= -7)) {
     return 29;
   } else if((h >= 150) && w && speed && beta && gamma ) {
-    return ;
+    return 13;
   } else if( h && (w <= 50) && speed && beta && gamma ) {
-    return 29;
+    return 12;
   } else if( h && w && speed && beta && gamma ) {
     return 1;
   } else {
