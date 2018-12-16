@@ -97,6 +97,11 @@ img {
   margin: 0 auto 20px;
   width: 70%;
 }
+.fig-cap {
+  color: #999;
+  word-break: break-all;
+  font-size: 10px;
+}
 .area-result {
   display: flex;
   justify-content: center;
